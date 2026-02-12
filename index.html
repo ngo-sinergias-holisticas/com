@@ -1,11 +1,27 @@
 <!doctype html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8">
-  <title>Sinergias Holísticas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documento</title>
+
+  <style>
+    body { margin: 0; background: #fff; }
+    .page { width: 100%; height: auto; display: block; }
+  </style>
 </head>
 <body>
-  <h1>Sinergias Holísticas</h1>
-  <p>Site em funcionamento.</p>
+
+<script>
+  const total = 12;
+  for (let i = 1; i <= total; i++) {
+    const img = document.createElement("img");
+    img.className = "page";
+    img.src = `pagina_${i}.png`;
+    img.alt = `Página ${i}`;
+    document.body.appendChild(img);
+  }
+</script>
+
 </body>
 </html>
