@@ -6,20 +6,55 @@
   <title>Documento</title>
 
   <style>
-    body { margin: 0; background: #fff; }
-    .page { width: 100%; height: auto; display: block; }
+    body { 
+      margin: 0; 
+      background: #fff; 
+      text-align: center;
+    }
+
+    .page { 
+      width: 100%; 
+      height: auto; 
+      display: block; 
+    }
+
+    .gold-link {
+      display: block;
+      margin: 30px 0 50px;
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+      text-decoration: none;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .gold-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
 <script>
   const total = 9;
+
   for (let i = 1; i <= total; i++) {
     const img = document.createElement("img");
     img.className = "page";
     img.src = `pagina_${i}.png`;
     img.alt = `Página ${i}`;
     document.body.appendChild(img);
+
+    // Se for a última imagem, adiciona o link
+    if (i === total) {
+      const link = document.createElement("a");
+      link.href = "https://www.youtube.com/watch?v=mshzqnMLfy0";
+      link.target = "_blank";
+      link.className = "gold-link";
+      link.textContent = "▶ Ver no YouTube";
+
+      document.body.appendChild(link);
+    }
   }
 </script>
 
